@@ -17,7 +17,9 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: |
-          cmake
+          mkdir -p build
+          cd build
+          cmake ..
           make
           make test
 
